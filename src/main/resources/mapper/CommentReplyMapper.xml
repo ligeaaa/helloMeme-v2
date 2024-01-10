@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hellomeme.v2.mapper.CommentReplyMapper">
+
+    <resultMap type="com.hellomeme.v2.model.entity.CommentReply" id="CommentReplyMap">
+        <result property="replyId" column="reply_id" jdbcType="INTEGER"/>
+        <result property="commentId" column="comment_id" jdbcType="INTEGER"/>
+        <result property="senderId" column="sender_id" jdbcType="INTEGER"/>
+        <result property="receiverId" column="receiver_id" jdbcType="INTEGER"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="checkState" column="check_state" jdbcType="INTEGER"/>
+        <result property="praseCount" column="prase_count" jdbcType="INTEGER"/>
+        <result property="delFlag" column="del_flag" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+</mapper>
+
+
+
