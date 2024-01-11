@@ -18,5 +18,10 @@ public class MemeTagServiceImpl extends ServiceImpl<MemeTagMapper, MemeTag> impl
     @Resource
     private MemeTagMapper memeTagMapper;
 
+    @Override
+    public Boolean deleteMemeTag(Long tagId, Long memeId) {
+        //TODO 考虑加条件，例如只能由创建者删除等，但是感觉有点不合理，因此先todo
+        return memeTagMapper.deleteMemeTag(tagId,memeId);
+    }
 }
 

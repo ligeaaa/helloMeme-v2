@@ -8,7 +8,10 @@
         <result property="createBy" column="create_by" jdbcType="INTEGER"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
-
+    <delete id="deleteMemeTag">
+        delete from meme_tag
+        where tag_id = #{tagId} and meme_id = #{memeId}
+    </delete>
 </mapper>
 
 
