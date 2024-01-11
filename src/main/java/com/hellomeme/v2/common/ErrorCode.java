@@ -9,6 +9,7 @@ package com.hellomeme.v2.common;
 public enum ErrorCode {
 
     SUCCESS(0, "ok"),
+    NULL_ERROR(30000,"空指针异常"),
     PARAMS_ERROR(40000, "请求参数错误"),
     NOT_LOGIN_ERROR(40100, "未登录"),
     NO_AUTH_ERROR(40101, "无权限"),

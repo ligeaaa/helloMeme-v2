@@ -6,6 +6,24 @@
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
     </resultMap>
+    <select id="getTagGroupWithTags" resultType="com.hellomeme.v2.model.entity.Tag">
+        SELECT
+            id,
+            tag_name,
+            tag_count
+        FROM
+            tag
+        WHERE
+            tag.tag_group_id = #{tagGroupId}
+          AND id IN (
+            SELECT
+                tag_id
+            FROM
+                meme_tag
+            WHERE
+                meme_id = #{memeId}
+        )
+    </select>
 
 </mapper>
 

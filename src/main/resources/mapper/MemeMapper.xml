@@ -15,6 +15,13 @@
         <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
+    <select id="getRandomId" resultType="java.lang.Long">
+        SELECT id FROM meme
+        WHERE id >= RAND() * (SELECT MAX(id) FROM meme)
+          and del_flag = 0
+        LIMIT 1;
+    </select>
+
 </mapper>
 
 

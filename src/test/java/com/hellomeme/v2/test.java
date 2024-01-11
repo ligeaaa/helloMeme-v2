@@ -20,7 +20,6 @@ public class test {
     //测试数据库是否成功连接，以及基本的调用是否成功
     @Test
     public void testGetTagGroupWithTags(){
-        System.out.println(memeController.queryById(3L));
         System.out.println(tagController.queryById(1L));
         System.out.println("123");
     }

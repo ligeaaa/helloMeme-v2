@@ -14,6 +14,14 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 @Mapper
 public interface MemeMapper extends BaseMapper<Meme>{
 
+    /**
+     * 返回一个随机id
+     * @return id
+     * @author lige
+     * @since 2023-08-19
+     */
+    Long getRandomId();
+
 }
 
 
