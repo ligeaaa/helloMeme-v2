@@ -1,6 +1,7 @@
 package com.hellomeme.v2.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.hellomeme.v2.common.Annotation.LogExecution;
 import com.hellomeme.v2.constants.MemePropertyConstant;
 import com.hellomeme.v2.model.entity.Meme;
 import com.hellomeme.v2.mapper.MemeMapper;
@@ -103,6 +104,7 @@ public class MemeServiceImpl extends ServiceImpl<MemeMapper, Meme> implements Me
         return getMemeSummary(id);
     }
 
+    @LogExecution
     @Override
     public MemeSummaryVo getMemeSummary(Long memeId) {
         MemeSummaryVo memeSummaryVo = new MemeSummaryVo();
